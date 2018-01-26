@@ -1,0 +1,21 @@
+package com.javarush.task.task18.task1824;
+
+/* 
+Файлы и исключения
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        String input = "";
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            while (true) {
+                new FileInputStream(input = reader.readLine()).close();
+            }
+        } catch (FileNotFoundException exc) {
+            System.out.println(input);
+        }
+    }
+}
